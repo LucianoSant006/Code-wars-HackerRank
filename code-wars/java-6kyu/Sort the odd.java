@@ -8,23 +8,24 @@
 
 //My solution
 public  static int[] sortArray(int[] array) {
-            List<Integer> listodd = new ArrayList<>();
-            for(int num : array){
-                if(num %2 != 0){
-                    listodd.add(num);
-                }
 
-            }
-            Collections.sort(listodd);
-            int index =0;
-            for(int i = 0; i < array.length; i++){
-                if(array[i] %2 !=0){
-                    array[i] = listodd.get(index);
-                  index++;
-                }
+     List<Integer> listodd = new ArrayList<>();
+
+     for(int num : array){
+          if(num %2 != 0)
+              listodd.add(num);
             }
 
+     Collections.sort(listodd);
+     int index =0;
+     
+     for(int i = 0; i < array.length; i++){
+          if(array[i] %2 !=0){
+             array[i] = listodd.get(index);
+             index++;
+                }
+            }
 
-        return array;
-    }
-}
+
+            return array;
+        }
